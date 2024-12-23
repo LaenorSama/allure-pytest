@@ -44,10 +44,10 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
         
     - name: Install allurectl
-        uses: allure-framework/setup-allurectl@v1
+      uses: allure-framework/setup-allurectl@v1
 
     - name: Build with Gradle
-        run: allurectl watch -- ./gradlew clean test
+      run: allurectl watch -- ./gradlew clean test
     - name: Test with pytest
       run: |
         conda install pytest
